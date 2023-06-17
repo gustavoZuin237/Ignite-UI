@@ -99,9 +99,12 @@
     "yaml": "^1.10.2"
   },
   "devDependencies": {
+    "@ignite-ui/eslint-config": "*",
     "@ignite-ui/tokens": "*",
     "@ignite-ui/ts-config": "*",
-    "@ignite-ui/eslint-config": "*",
+    "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.2.5",
+    "react": "^18.2.0",
     "tsup": "^6.7.0",
     "typescript": "^5.1.3"
   }
