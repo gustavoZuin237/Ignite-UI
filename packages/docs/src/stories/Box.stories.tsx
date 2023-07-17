@@ -12,6 +12,13 @@ export default {
       </>
     ),
   },
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
 } as Meta<typeof Box>
 
 export const Primary: StoryObj = {}
