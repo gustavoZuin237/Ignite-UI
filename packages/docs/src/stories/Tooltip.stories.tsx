@@ -7,5 +7,5 @@ export default {
 } as Meta
 
 export const Primary: StoryObj = {
-  args: { text: '' },
+  args: { text: 'Tooltip text' },
 }
