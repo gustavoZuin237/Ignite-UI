@@ -1,6 +1,9 @@
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
-  stories: ["../src/pages/**/*.mdx", "../src/stories/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: [
+    "../src/pages/**/*.mdx",
+    "../src/stories/**/*.stories.@(js|jsx|ts|tsx)"
+  ],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -12,17 +15,15 @@ const config = {
     options: {},
   },
   features: {
-    "storyStoreV7": true
+    storyStoreV7: true
   },
-  viteFinal: (config, { configType }) => {
-    if (configType === 'PRODUCTION') {
-      config.base = '/Ignite-UI/'
-    }
-
-    return config
+  viteFinal: async (config) => {
+    config.base = "/Ignite-UI/";
+    return config;
   },
   docs: {
     autodocs: "tag",
   },
 };
+
 export default config;
