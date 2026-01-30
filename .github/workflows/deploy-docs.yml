@@ -27,11 +27,6 @@ jobs:
       - name: Build Storybook
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: packages/docs/storybook-static
-      
       - name: Locate Storybook output
         run: |
           echo "=== packages/docs ==="
@@ -40,6 +35,10 @@ jobs:
           echo "=== repo root ==="
           ls -la || true
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: packages/docs/storybook-static
 
   deploy:
     runs-on: ubuntu-latest
